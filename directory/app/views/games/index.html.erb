@@ -1,8 +1,10 @@
-<h1>Hi</h1>
-<%= render partial: "game" %>
-<div class="games-all">
-  <% @games.each do |game| %>
+<div class="games-page">
+  <%= link_to "Add a game", new_game_path %>
+  <% @games.order('name').each do |game| %>
+    <h4><%= game.name %></h4>
+    <img src="<%= game.imgurl %>" style="width: 200px">
     <p>
+      <%= link_to "More info", game_path(game) %>
     </p>
   <% end %>
 </div>

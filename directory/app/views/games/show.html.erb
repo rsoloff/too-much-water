@@ -1,1 +1,19 @@
-<%= render partial: 'game', locals: {game: @game}%>
+<%= link_to "Return to main page", games_path %>
+
+<h2><%= @game.name %></h2>
+
+<img src="<%= @game.imgurl %>" style="width: 200px">
+<ul>
+  <li><%= 'Developer: ' + @game.developer %></li>
+  <li><%= 'Genre: ' + @game.genre %></li>
+  <li><%= 'Publisher: ' + @game.publisher %></li>
+  <li><%= 'Platform: ' + @game.platform %></li>
+</ul>
+<h3>Review</h3>
+<h4><%= @game.score %></h4>
+<p>
+  <%= @game.review %>
+</p>
+
+<%= link_to "Edit this game?", edit_game_path %>
+<%= button_to 'DELETE THIS GAME', @game, :method => :delete %>
