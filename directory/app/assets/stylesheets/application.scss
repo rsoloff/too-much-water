@@ -11,3 +11,24 @@
  * file per style scope.
  *
  */
+
+  body {
+    background-color: black;
+    color: white;
+    text-align: center;
+  }
+
+  .form {
+    width: 500px;
+    margin-left: 24%;
+    margin-top: 100px;
+    text-align: center;
+    border: 1px solid white;
+   }
+
+   .login {
+   margin-left: 84%;
+   margin-top: -106px;
+   height: 100px;
+   width: 200px;
+  }

@@ -1,5 +1,5 @@
+<%= link_to "Add a game", new_game_path %>
 <div class="games-page">
-  <%= link_to "Add a game", new_game_path %>
   <% @games.order('name').each do |game| %>
     <h4><%= game.name %></h4>
     <img src="<%= game.imgurl %>" style="width: 200px">
